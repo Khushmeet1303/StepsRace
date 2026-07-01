@@ -1,0 +1,13 @@
+// Placeholder google-services.json location indicator
+// ⚠️  Place the REAL google-services.json from Firebase Console in THIS folder:
+//     android/app/google-services.json
+//
+// Steps:
+//   1. https://console.firebase.google.com → your project
+//   2. Project Settings → Your apps → Android app
+//      (package name: com.example.step_race)
+//   3. Download google-services.json
+//   4. Copy it here: android/app/google-services.json
+//
+// The file is excluded from git (see .gitignore).
+// Never commit your real google-services.json to source control.

@@ -1,0 +1,30 @@
+// Firestore Security Rules for Step Race
+// Deploy via: firebase deploy --only firestore:rules
+//
+// Copy-paste these into Firebase Console → Firestore → Rules
+
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Users can read/write their own profile and daily steps
+    match /users/{uid} {
+      allow read: if request.auth != null;
+      allow write: if request.auth != null && request.auth.uid == uid;
+
+      match /dailySteps/{date} {
+        allow read: if request.auth != null;
+        allow write: if request.auth != null && request.auth.uid == uid;
+      }
+    }
+
+    // Groups: any authenticated user can read; only members can update
+    match /groups/{groupId} {
+      allow read: if request.auth != null;
+      allow create: if request.auth != null;
+      allow update: if request.auth != null
+        && request.auth.uid in resource.data.memberIds;
+      allow delete: if false;
+    }
+  }
+}
