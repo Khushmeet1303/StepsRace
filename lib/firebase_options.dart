@@ -36,11 +36,11 @@ class DefaultFirebaseOptions {
   // ── FILL THESE IN ──────────────────────────────────────────────────────────
   // Find all values in Firebase Console → Project Settings → General → Your apps
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'YOUR_ANDROID_API_KEY',
-    appId: 'YOUR_ANDROID_APP_ID',               // e.g. 1:123456789:android:abc123
-    messagingSenderId: 'YOUR_SENDER_ID',         // Project number
-    projectId: 'YOUR_PROJECT_ID',
-    storageBucket: 'YOUR_PROJECT_ID.appspot.com',
+    apiKey: 'AIzaSyA3_eKq_FPXrY_6hQTqRtsejDeodpg2nDc',
+    appId: '1:17096587187:android:f2bfd2bdaedd0c7945fdc6',
+    messagingSenderId: '17096587187',
+    projectId: 'steps-race',
+    storageBucket: 'steps-race.firebasestorage.app',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
